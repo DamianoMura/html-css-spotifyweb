@@ -38,14 +38,17 @@ h2 {
 #sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 60px;
   height: var(--main_h);
-  background-color: #000000;
-  padding: 10px;
+  background-color: black;
   text-align: center;
   overflow-y: hidden;
+  /* padding: 10px;*/
 }
+
+
+
+
 
 #content {
   width: calc(100vw - 60px);
@@ -110,16 +113,33 @@ h2 {
   vertical-align: middle;
 }
 
-.logo-lg,
-.menu-txt {
+/*logo*/
+.logo {
+  padding: 12px;
+}
+
+.logo-lg {
   display: none;
 }
+
+/*/logo*/
+
 
 #sidebar a {
   text-decoration: none;
   color: rgb(126, 126, 126);
 }
 
+.side-menu ul li a div {
+  padding: 12px;
+}
+
+.side-menu ul li a:focus {
+
+  border-left: 3px yellowgreen solid;
+}
+
+/*
 .user img {
   background-color: grey;
   border-radius: 50%;
@@ -139,13 +159,13 @@ h2 {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
-  color: grey;
 }
 
 .create-playlist div {
   height: 50px;
   width: 50px;
   background-color: grey;
+  color: white;
   margin: 10px 0;
   font-size: 3rem;
   text-align: center;
@@ -163,7 +183,7 @@ h2 {
 
 
 
-/* /sidebar content */
+ /sidebar content */
 /* screen s */
 
 @media all and (min-width: 550px) {
