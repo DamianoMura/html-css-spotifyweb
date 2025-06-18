@@ -1,19 +1,27 @@
+:root {
+  --foot_h: 80px;
+  --main_h: calc(100vh - var(--foot_h));
+  --m-side_w: 60px;
+  --w-side_w: 250px;
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /*layout mobile first screen xs */
 footer {
-  height: 100px;
+  height: var(--foot_h);
   background-color: #282828;
 }
 
 main {
-  height: calc(100vh - 100px);
+  height: var(--main_h);
   background-color: #374257;
   display: flex;
 }
@@ -24,7 +32,6 @@ main {
 }
 
 h2 {
-
   margin: 5px;
 }
 
@@ -33,15 +40,16 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   width: 60px;
-  height: 100%;
+  height: var(--main_h);
   background-color: #000000;
   padding: 10px;
   text-align: center;
+  overflow-y: hidden;
 }
 
 #content {
   width: calc(100vw - 60px);
-  height: 100%;
+  height: --main-h;
   overflow-y: auto;
 
 }
@@ -59,7 +67,7 @@ h2 {
   align-items: center;
 }
 
-.menu {
+#content .menu {
 
   height: 60px;
   margin: 60px 0;
@@ -97,7 +105,7 @@ h2 {
 
 /* sidebar content */
 #sidebar img {
-  height: 30px;
+  height: 35px;
   margin: 10px 0;
   vertical-align: middle;
 }
@@ -109,7 +117,7 @@ h2 {
 
 #sidebar a {
   text-decoration: none;
-  color: white;
+  color: rgb(126, 126, 126);
 }
 
 .user img {
@@ -119,16 +127,49 @@ h2 {
 }
 
 .playlist {
+  margin: 30px 0;
+  display: none;
+}
+
+.playlist h3 {
+  color: white;
+}
+
+.create-playlist {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: grey;
+}
+
+.create-playlist div {
+  height: 50px;
+  width: 50px;
+  background-color: grey;
+  margin: 10px 0;
+  font-size: 3rem;
+  text-align: center;
+  vertical-align: middle;
+  margin: 15px 5px 15px 0;
+}
+
+.playlist ul {
+  list-style: none;
+}
+
+.playlist ul li {
   margin: 10px 0;
 }
+
+
 
 /* /sidebar content */
 /* screen s */
 
-@media all and (min-width: 552px) {
+@media all and (min-width: 550px) {
 
   #sidebar {
-    width: 200px;
+    width: 250px;
     text-align: left;
   }
 
@@ -144,15 +185,19 @@ h2 {
     display: inline;
   }
 
+  .playlist {
+    display: block;
+  }
+
   .cta,
   #content {
-    width: calc(100vw - 200px);
+    width: calc(100vw - 250px);
   }
 }
 
 /* screen md */
 
-@media all and (min-width: 639px) {
+@media all and (min-width: 780px) {
 
   .col {
     width: calc(100% / 4 - 10px)
@@ -161,7 +206,7 @@ h2 {
 
 /* screen lg */
 
-@media all and (min-width: 878px) {
+@media all and (min-width: 1200px) {
   .col {
     width: calc(100% / 6 - 10px)
   }
