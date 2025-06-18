@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/*layout mobile first */
+/*layout mobile first screen xs */
 footer {
   height: 100px;
   background-color: rgb(0, 0, 0);
@@ -12,7 +12,7 @@ footer {
 
 main {
   height: calc(100vh - 100px);
-  background-color: rgb(160, 103, 95);
+  background-color: #141922;
   display: flex;
 }
 
@@ -22,18 +22,20 @@ main {
 }
 
 h2 {
-  margin-left 20px;
+
+  margin: 5px;
 }
 
 #sidebar {
-
+  width: 60px;
   height: 100%;
   background-color: #000000;
   padding: 10px;
+  text-align: center;
 }
 
 #content {
-  width: 100%;
+  width: calc(100vw - 60px);
   height: 100%;
   overflow-y: auto;
 
@@ -46,18 +48,18 @@ h2 {
   top: 0;
   right: 0;
   width: calc(100vw - 60px);
-  background-color: rgba(0, 0, 0, 0.505);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 60px;
   padding-right: 30px;
   align-items: center;
 }
 
 .menu {
-  background-color: rgb(0, 255, 81);
+
   height: 60px;
   margin: 60px 0;
   padding: 10px;
-  justify-content: center;
+
 }
 
 .row {
@@ -89,7 +91,7 @@ h2 {
 
 /* content */
 #sidebar img {
-  height: 50px;
+  height: 30px;
   margin: 10px 0;
 }
 
