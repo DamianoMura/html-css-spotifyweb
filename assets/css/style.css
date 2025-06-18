@@ -16,6 +16,11 @@ main {
   display: flex;
 }
 
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
 #sidebar {
   width: 60px;
   height: 100%;
@@ -77,4 +82,4 @@ main {
 
 }
 
-/* styling */
+/* content */
