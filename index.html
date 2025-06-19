@@ -15,9 +15,40 @@
       <!--sidebar-->
       <div id="sidebar" class="bg-black">
         <div class="top-bar">
-          <div class="logo">logo</div>
-          <div class="side-menu">menu</div>
-          <div class="playlist">playlist</div>
+          <div class="logo p-10">
+            <img src="assets/img/logo-small.svg" class="logo-sm">
+            <img src="assets/img/logo.svg" class="logo-lg">
+          </div>
+          <div class="side-menu py-10">
+            <ul>
+              <!--if focused lights up the selection that is normally overlayed adding green border on the left-->
+              <li>
+                <a href="#">
+                  <img src="assets/img/home.svg" alt>
+                  <span>Home</span>
+                  <div class="overlay bg-trans-black"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/search.svg" alt>
+                  <span>Cerca</span>
+                  <div class="overlay bg-trans-black"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="assets/img/libreria.svg" alt>
+                  <span>La mia libreria</span>
+                  <div class="overlay bg-trans-black"></div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="playlist">
+            <h3>Playlist</h3>
+          </div>
         </div>
         <div class="bottom-bar">bottom</div>
       </div>
