@@ -1,13 +1,22 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --foot-h: 60px;
   --mob-side-w: 60px;
   --side-w: 250px;
+  --cta-h: 60px;
+  --gap: 10px;
+  --col-20: calc(20% - var(--gap));
+  --col-25: calc(25% - var(--gap));
+  --col-30: calc(30% - var(--gap));
+  --col-40: calc(40% - var(--gap));
+  --col-50: calc(50% - var(--gap));
+  --col-60: calc(60% - var(--gap));
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*layout mobile first */
@@ -25,8 +34,13 @@ main {
 }
 
 #sidebar {
-  width: 60px;
+  width: var(--mob-side-w);
   height: 100%;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
 }
 
 #content {
@@ -42,9 +56,8 @@ main {
   position: fixed;
   top: 0;
   right: 0;
-  width: calc(100vw - 60px);
-  height: 60px;
-  padding-right: 30px;
+  width: calc(100vw - var(--mob-side-w));
+  height: var(--cta-h);
   align-items: center;
   z-index: 3;
 }
@@ -52,12 +65,13 @@ main {
 
 .menu {
   justify-content: center;
+  margin-top: var(--cta-h);
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--gap);
 }
 
 /* debug only */
@@ -73,11 +87,14 @@ main {
   height: 250px;
 }
 
+.col-100 {
+  width: 100%;
+}
+
 /* /debug only */
 
 .col {
-  width: calc(100% / 2 - 20px);
-
+  width: var(--col-50);
 }
 
 /* styling */
@@ -88,6 +105,7 @@ main {
   padding: 10px 20px;
   text-decoration: none;
   color: white;
+  margin-right: 20px;
 }
 
 /*utility*/
@@ -142,4 +160,28 @@ main {
 
 .py-20 {
   padding: 20px 0;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.m-15 {
+  margin: 15px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.my-10 {
+  margin: 10px 0;
+}
+
+.my-15 {
+  margin: 15px 0;
+}
+
+.my-20 {
+  margin: 20px 0;
 }
