@@ -8,6 +8,7 @@
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
     <title>Document</title>
   </head>
   <body>
@@ -15,29 +16,29 @@
       <!--sidebar-->
       <div id="sidebar" class="bg-black">
         <div class="top-bar">
-          <div class="logo p-10">
+          <div class="logo p-20">
             <img src="assets/img/logo-small.svg" class="logo-sm">
             <img src="assets/img/logo.svg" class="logo-lg">
           </div>
-          <div class="side-menu py-10">
+          <div class="side-menu py-20">
             <ul>
               <!--if focused lights up the selection that is normally overlayed adding green border on the left-->
               <li>
-                <a href="#">
+                <a href="#" class="px-10">
                   <img src="assets/img/home.svg" alt>
                   <span>Home</span>
                   <div class="overlay bg-trans-black"></div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" class="px-10">
                   <img src="assets/img/search.svg" alt>
                   <span>Cerca</span>
                   <div class="overlay bg-trans-black"></div>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" class="px-10">
                   <img src="assets/img/libreria.svg" alt>
                   <span>La mia libreria</span>
                   <div class="overlay bg-trans-black"></div>
@@ -46,11 +47,53 @@
 
             </ul>
           </div>
-          <div class="playlist">
+          <div class="playlist px-10">
             <h3>Playlist</h3>
+            <div class="add-playlist my-10">
+              <a href="#">
+                <span class="plus">+</span> <span>Add playlist</span>
+                <div class="overlay bg-trans-black"></div>
+              </a>
+
+            </div>
+            <ul>
+              <li>
+                <a href="#">
+                  <span>Chill out</span>
+                  <div class="overlay bg-trans-black"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Punk mix </span>
+                  <div class="overlay bg-trans-black"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>Psychedelic Mix</span>
+                  <div class="overlay bg-trans-black"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>mare</span>
+                  <div class="overlay bg-trans-black"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span>LifeAfterOil 2025 </span>
+                  <div class="overlay bg-trans-black"></div>
+                </a>
+              </li>
+
+            </ul>
           </div>
         </div>
-        <div class="bottom-bar">bottom</div>
+        <div class="bottom-bar px-10">
+
+        </div>
       </div>
       <!--/sidebar-->
       <!--content-->

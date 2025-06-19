@@ -1,0 +1,39 @@
+/* media queries */
+
+@media all and (min-width:552px) {
+
+  #content,
+  .cta {
+    width: calc(100vw - var(--side-w));
+  }
+
+  #sidebar {
+    width: var(--side-w);
+  }
+
+  .logo-lg,
+  .side-menu ul li a span {
+    display: inline;
+  }
+
+  .playlist {
+    display: block;
+  }
+
+  .logo-sm {
+    display: none;
+  }
+}
+
+@media all and (min-width:878px) {
+  .col {
+    width: var(--col-25);
+  }
+
+}
+
+@media all and (min-width:1200px) {
+  .col {
+    width: var(--col-16);
+  }
+}

@@ -127,17 +127,28 @@ main {
   list-style: none;
 }
 
+.cta .btn,
+.add-playlist a,
+.side-menu ul li a,
+.playlist ul li a {
+  text-decoration: none;
+  color: white;
+}
+
 .side-menu ul li a {
-  position: relative;
   height: 50px;
   display: flex;
   align-items: center;
-  text-decoration: none;
-  color: white;
   border-left: 3px solid;
   border-left-color: rgb(0, 0, 0);
   margin-left: 7px;
   margin-bottom: 10px;
+}
+
+.side-menu ul li a,
+.playlist .add-playlist,
+.playlist ul li {
+  position: relative;
 }
 
 .side-menu ul li a:focus {
@@ -155,10 +166,40 @@ main {
   display: none;
 }
 
+
 .side-menu ul li a img {
   height: 100%;
 }
 
+
+.add-playlist a:focus .overlay {
+  display: none;
+}
+
+.plus {
+  height: 50px;
+  padding: 0 15px;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.playlist {
+  margin-left: 10px;
+  display: none;
+}
+
+.playlist ul li {
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+.playlist a:focus .overlay {
+  display: none;
+}
 
 /*
 .side-menu img {
@@ -189,8 +230,6 @@ main {
   border: white solid 1px;
   border-radius: 20px;
   padding: 10px 20px;
-  text-decoration: none;
-  color: white;
   margin-right: 20px;
 }
 
@@ -308,40 +347,4 @@ main {
 
 .mx-20 {
   margin: 0 20px;
-}
-
-/* media queries */
-
-@media all and (min-width:552px) {
-
-  #content,
-  .cta {
-    width: calc(100vw - var(--side-w));
-  }
-
-  #sidebar {
-    width: var(--side-w);
-  }
-
-  .logo-lg,
-  .side-menu ul li a span {
-    display: inline;
-  }
-
-  .logo-sm {
-    display: none;
-  }
-}
-
-@media all and (min-width:878px) {
-  .col {
-    width: var(--col-25);
-  }
-
-}
-
-@media all and (min-width:1200px) {
-  .col {
-    width: var(--col-16);
-  }
 }
