@@ -1,8 +1,8 @@
 :root {
-  --foot-h: 100px;
+  --foot-h: 80px;
   --mob-side-w: 80px;
-  --side-w: 250px;
-  --cta-h: 100px;
+  --side-w: 230px;
+  --cta-h: 60px;
   --gap: 10px;
   --col-16: calc(100% / 6 - var(--gap));
   --col-20: calc(20% - var(--gap));
@@ -11,7 +11,7 @@
   --col-40: calc(40% - var(--gap));
   --col-50: calc(50% - var(--gap));
   --col-60: calc(60% - var(--gap));
-
+  --foot-color: #373737;
 }
 
 * {
@@ -24,11 +24,20 @@
 /*layout mobile first */
 footer {
   height: var(--foot-h);
-  background-color: #555555;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: var(--foot-color);
   color: white;
+}
+
+footer .row {
+  height: 100%;
+  width: 100%;
+  gap: 0;
+  justify-content: space-between;
+}
+
+
+footer.row {
+  justify-content: space-between;
 }
 
 main {
@@ -88,6 +97,8 @@ main {
   gap: var(--gap);
 }
 
+
+
 /* debug only */
 .col:nth-child(odd) {
   background-color: beige;
@@ -97,11 +108,12 @@ main {
   background-color: rgb(239, 239, 19);
 }
 
+
 .col {
   height: 250px;
 }
 
-/* /debug only */
+/*/debug only */
 
 .col {
   width: var(--col-50);
@@ -207,7 +219,8 @@ main {
 
 .profile a,
 .download a,
-.preview {
+.preview,
+.player {
   display: flex;
   align-items: center;
 }
@@ -231,7 +244,6 @@ main {
 }
 
 .profile span {
-  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -242,23 +254,37 @@ main {
 /* /sidebar */
 
 /* footer*/
-.preview h3 {
-  font-weight: bold;
-}
+/*col preview */
 
-.preview h4 {
-  color: grey;
-}
 
 .preview img {
-  height: 60px;
-  margin: 10px
+  margin: 10px;
+  height: 40px;
 }
 
-.mx-50 i {
-  margin: 0 10px;
-  ;
+.track-info {
+  width: 55px;
 }
+
+.title span {
+  font-weight: bold;
+  font-size: 0.6rem;
+}
+
+.track-info span:last-child {
+  font-size: 0.8rem;
+}
+
+
+
+.icons i,
+.track-info span {
+  display: block;
+  margin-bottom: 3px;
+}
+
+
+
 
 /* /footer*/
 
@@ -298,6 +324,10 @@ main {
 .bg-trans-black {
 
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-grey {
+  color: grey;
 }
 
 /* paddings */

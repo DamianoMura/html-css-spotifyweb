@@ -27,16 +27,29 @@
   .bottom-bar a span {
     display: block;
   }
+
+  .track-info {
+    width: 100%;
+
+  }
 }
 
-@media all and (min-width:878px) {
+@media all and (min-width:768px) {
   .col {
     width: var(--col-25);
   }
 
+  .icons {
+    display: flex;
+  }
+
+  .icons i {
+    margin: 5px;
+  }
+
 }
 
-@media all and (min-width:1200px) {
+@media all and (min-width:1180px) {
   .col {
     width: var(--col-16);
   }
