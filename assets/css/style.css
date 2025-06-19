@@ -4,6 +4,7 @@
   --side-w: 250px;
   --cta-h: 60px;
   --gap: 10px;
+  --col-16: calc(100% / 6 - var(--gap));
   --col-20: calc(20% - var(--gap));
   --col-25: calc(25% - var(--gap));
   --col-30: calc(30% - var(--gap));
@@ -138,6 +139,7 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* paddings */
 .p-10 {
   padding: 10px;
 }
@@ -162,6 +164,19 @@ main {
   padding: 20px 0;
 }
 
+.px-10 {
+  padding: 0 10px;
+}
+
+.px-15 {
+  padding: 0 15px;
+}
+
+.px-20 {
+  padding: 0 20px;
+}
+
+/* margins */
 .m-10 {
   margin: 10px;
 }
@@ -184,4 +199,44 @@ main {
 
 .my-20 {
   margin: 20px 0;
+}
+
+.mx-10 {
+  margin: 0 10px;
+}
+
+.mx-15 {
+  margin: 0 15px;
+}
+
+.mx-20 {
+  margin: 0 20px;
+}
+
+/* media queries */
+
+@media all and (min-width:552px) {
+
+  #content,
+  .cta {
+    width: calc(100vw - var(--side-w));
+  }
+
+  #sidebar {
+    width: var(--side-w);
+  }
+
+}
+
+@media all and (min-width:878px) {
+  .col {
+    width: var(--col-25);
+  }
+
+}
+
+@media all and (min-width:1200px) {
+  .col {
+    width: var(--col-16);
+  }
 }
