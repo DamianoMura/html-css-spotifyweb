@@ -1,6 +1,6 @@
 :root {
   --foot-h: 60px;
-  --mob-side-w: 70px;
+  --mob-side-w: 80px;
   --side-w: 250px;
   --cta-h: 60px;
   --gap: 10px;
@@ -220,7 +220,7 @@ main {
 
 .download img,
 .profile img {
-  max-width: 45px;
+  max-height: 45px;
   margin-right: 10px;
 }
 
@@ -236,6 +236,9 @@ main {
   font-weight: bold;
 }
 
+.bottom-bar a span {
+  display: none;
+}
 
 
 .cta .btn {
