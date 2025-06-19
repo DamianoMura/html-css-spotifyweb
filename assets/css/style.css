@@ -4,26 +4,33 @@
   box-sizing: border-box;
 }
 
+:root {
+  --foot-h: 60px;
+  --mob-side-w: 60px;
+  --side-w: 250px;
+}
+
 /*layout mobile first */
 footer {
-  height: 100px;
+  height: 60px;
   background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main {
-  height: calc(100vh - 100px);
-  background-color: rgb(160, 103, 95);
+  height: calc(100vh - var(--foot-h));
   display: flex;
 }
 
 #sidebar {
   width: 60px;
   height: 100%;
-  background-color: bisque;
 }
 
 #content {
-  width: calc(100vw - 60px);
+  width: calc(100vw - var(--mob-side-w));
   height: 100%;
   overflow-y: auto;
 
@@ -36,17 +43,14 @@ main {
   top: 0;
   right: 0;
   width: calc(100vw - 60px);
-  background-color: rgba(0, 0, 0, 0.505);
   height: 60px;
   padding-right: 30px;
   align-items: center;
+  z-index: 3;
 }
 
+
 .menu {
-  background-color: rgb(0, 255, 81);
-  height: 60px;
-  margin: 60px 0;
-  padding: 10px;
   justify-content: center;
 }
 
@@ -54,7 +58,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
 }
 
 /* debug only */
@@ -78,3 +81,65 @@ main {
 }
 
 /* styling */
+
+.cta .btn {
+  border: white solid 1px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/*utility*/
+.bg-green {
+  background-color: green;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-silver {
+  background-color: silver;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-trans-black {
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.py-10 {
+  padding: 10px 0;
+}
+
+.py-15 {
+  padding: 15px 0;
+}
+
+.py-20 {
+  padding: 20px 0;
+}
