@@ -29,7 +29,7 @@
   }
 
   .track-info {
-    width: 100%;
+    width: 100px;
 
   }
 }
@@ -43,9 +43,6 @@
     display: flex;
   }
 
-  .icons i {
-    margin: 5px;
-  }
 
 }
 
