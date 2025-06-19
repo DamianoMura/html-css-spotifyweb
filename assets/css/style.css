@@ -31,9 +31,6 @@ main {
   width: 95%;
 }
 
-h2 {
-  margin: 5px;
-}
 
 #sidebar {
   display: flex;
@@ -43,7 +40,7 @@ h2 {
   background-color: black;
   text-align: center;
   overflow-y: hidden;
-  /* padding: 10px;*/
+
 }
 
 
@@ -54,7 +51,7 @@ h2 {
   width: calc(100vw - 60px);
   height: --main-h;
   overflow-y: auto;
-
+  color: white;
 }
 
 .cta {
@@ -67,6 +64,7 @@ h2 {
   background-color: rgba(0, 0, 0, 0.5);
   padding-right: 30px;
   align-items: center;
+  z-index: 3;
 }
 
 .content-menu {
@@ -83,13 +81,16 @@ h2 {
 
 }
 
+section {
+  margin: 10px 0;
+}
 
 .col {
   width: calc(100% / 2 - 10px);
 
 }
 
-/* debug only */
+/* debug only 
 .col:nth-child(odd) {
   background-color: beige;
 }
@@ -102,7 +103,7 @@ h2 {
   height: 250px;
 }
 
-/* /debug only */
+ /debug only */
 
 /* sidebar content */
 
@@ -221,6 +222,72 @@ h2 {
   background-color: yellowgreen;
 } */
 
+
+.card {
+  text-align: center;
+  margin: 10px 0;
+
+}
+
+.card img {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.card h5 {
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.card span {
+  color: grey;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.overlay {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  font-size: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.coveralbum {
+  position: relative;
+}
+
+.card:hover .overlay {
+  display: flex;
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+}
+
+#popular .card img,
+#popular .card .overlay {
+  border-radius: 50%;
+}
+
+.pic2 {
+  display: none;
+}
+
+#popular .card .coveralbum:hover .pic2 {
+  display: block;
+}
+
+#popular .card .coveralbum:hover .pic1 {
+  display: none;
+}
+
 /* screen s */
 
 @media all and (min-width: 550px) {
@@ -252,6 +319,7 @@ h2 {
   }
 }
 
+/* utility */
 /* screen md */
 
 @media all and (min-width: 780px) {
