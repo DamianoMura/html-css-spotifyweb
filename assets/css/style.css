@@ -132,7 +132,30 @@ main {
 }
 
 .col-f.preview {
-  max-width: 235px;
+  max-width: 212px;
+}
+
+.col-f.player {
+  width: calc(100% - 339px);
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  font-size: .7rem;
+}
+
+.col-f.player i {
+
+  font-size: 1.2rem;
+}
+
+.music-bar {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.col-f.controls {
+  max-width: 127px;
 }
 
 .col-f.lvl-bar {
@@ -169,7 +192,8 @@ main {
 .side-menu ul li a,
 .playlist ul li a,
 .download a,
-.profile a {
+.profile a,
+.categories a {
   text-decoration: none;
   color: white;
 }
@@ -287,6 +311,26 @@ main {
   font-size: 0.9rem;
 }
 
+/*categories top menu */
+.categories ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.categories li {
+  margin: 0 10px;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.categories .row .selection {
+  width: 60%;
+  border-bottom: yellowgreen 3px solid;
+  margin: 0 15px;
+}
+
+
 /*find out */
 
 .section-title span {
@@ -360,8 +404,26 @@ main {
   margin: 3px;
 }
 
+/*col-f player*/
+
+.player-controls i {
+  margin: 5px;
+}
+
+.player-controls i:hover {
+  margin: 0 3px;
+  font-size: 1.5rem;
+}
+
+.lvl-bar.playing {
+  width: 80%;
+}
+
 /*col-f controls*/
-.controls {
+.controls,
+.player,
+.player-controls,
+.music-bar {
   display: flex;
   align-items: center;
 }
@@ -448,6 +510,10 @@ main {
 }
 
 /* paddings */
+.pt-20 {
+  padding-top: 20px;
+}
+
 .p-5 {
   padding: 5px;
 }
