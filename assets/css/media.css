@@ -1,6 +1,6 @@
 /* media queries */
 
-@media all and (min-width:576px) {}
+
 
 @media all and (min-width:576px) {
 
@@ -31,25 +31,33 @@
   }
 
   .track-info {
-    width: 100px;
+    width: 100%
+  }
 
+  .playing,
+  .player {
+    width: 20%;
+  }
+
+  .media-controls {
+    width: 60%
+  }
+}
+
+@media all and (min-width:768px) {
+  .col {
+    width: calc(25% - var(--gap));
+  }
+
+  .icons {
+    display: flex;
   }
 
 
-  @media all and (min-width:768px) {
-    .col {
-      width: var(--col-25);
-    }
+}
 
-    .icons {
-      display: flex;
-    }
-
-
+@media all and (min-width:992px) {
+  .col {
+    width: calc(var(--col-16) - var(--gap));
   }
-
-  @media all and (min-width:992px) {
-    .col {
-      width: var(--col-16);
-    }
-  }
+}

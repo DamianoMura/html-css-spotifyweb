@@ -17,11 +17,13 @@
   --col-30: 30%;
   --col-40: 40%;
   --col-50: 50%;
-  --col-60: 100%;
+  --col-60: 60%;
   /*background colors*/
   --foot-color: #595050;
 }
 
+/*                  GOOD LUCK MAGIC SPELL
+*/
 * {
   margin: 0;
   padding: 0;
@@ -29,9 +31,17 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/*                      MACRO CONTAINERS
+*/
 main {
   height: calc(100vh - var(--foot-h));
   display: flex;
+}
+
+footer {
+  height: var(--foot-h);
+  width: 100vw;
+  background-color: var(--foot-color);
 }
 
 .container {
@@ -40,52 +50,35 @@ main {
 }
 
 .row {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap);
 }
 
-.row_no-gap {
+.row.no-gap {
   gap: 0;
 }
 
-/*               column selectors 
+.col {
+  width: calc(50% - var(--gap));
+}
+
+.row.no-gap {
+  gap: 0;
+}
+
+/*                      /MACRO CONTAINERS
 */
-.col-20 {
-  width: calc(var(--col-20) - var(--gap));
-}
 
-.col-20_no-gap {
-  width: var(--col-20);
-}
 
-.col-30 {
-  width: calc(var(--col-30) - var(--gap));
-}
-
-.col-30_no-gap {
-  width: var(--col-30);
-}
-
-.col-50 {
-  width: calc(var(--col-50) - var(--gap));
-}
-
-.col-50_no-gap {
-  width: var(--col-50);
-}
-
-.col-60 {
-  width: calc(var(--col-60) - var(--gap));
-}
-
-.col-60_no-gap {
-  width: var(--col-60);
-}
 
 .col-100 {
   width: 100%;
 }
+
+/*                      /COLUMN SELECTORS 
+*/
 
 /*                /column selector
 */
@@ -101,17 +94,15 @@ main {
 /*               #       ###     ###    #    #####  #   #           
 */
 
-footer {
-  height: var(--foot-h);
-  background-color: var(--foot-color);
-}
 
 /*                       FOOTER LAYOUT
 */
-footer .row {
-  height: 100%;
-  width: 100%;
+.playing,
+.player,
+.media-controls {
+  width: calc(100% / 3)
 }
+
 
 
 /*               REUSABLE BOX FOR ICONS WITH HOVER EFFECT*/
@@ -125,37 +116,35 @@ footer .row {
   transform: scale(1.2);
 }
 
-.box.like:hover {
-  transform: scale(1.2);
-}
 
 /*                               boxed icons*/
-.box.like,
-.box.save {
-  height: 30px;
-  width: 30px;
-}
 
-
-.player-controls .box {
+.player .box {
   min-height: 30px;
   min-width: 30px;
-  font-size: 1rem;
+}
+
+.media-controls .box,
+.box.like,
+.box.save {
+  min-height: 20px;
+  min-width: 20px;
+  font-size: 0.7rem;
 }
 
 /*                 /FOOTER - PLAYING ARTIST */
 .playing img {
   margin: 10px;
-  height: 40px;
+  width: 40px;
 }
 
 .track-info {
-  width: 55px;
+  width: 50px;
 }
 
 .title span {
   font-weight: bold;
-  font-size: 0.6rem;
+  font-size: 60%;
 }
 
 .track-info span:last-child {
@@ -200,29 +189,34 @@ footer .row {
   display: block;
 }
 
+
 /*               lvl bar end*/
 
 /*                /FOOTER - MUSIC PLAYER */
 
 
-.player {
-  width: 100%;
-}
 
 .box .fa-circle-play {
   font-size: 1.5rem;
 }
 
-.player .flex {
-  width: 70%;
-}
-
 .player .lvl-bar {
-  width: 90%
+  width: 50%;
 }
 
-/* 7 music player*/
+.volume {
+  font-size: 0.7rem;
+}
 
+/* / music player*/
+/*                 MEDIA CONTROLS
+*/
+.media-controls .lvl-bar {
+  width: 50px;
+}
+
+/*               / MEDIA CONTROLS
+*/
 
 
 
@@ -494,6 +488,10 @@ footer .row {
 
 .j-c-center {
   justify-content: center;
+}
+
+.j-c-space-between {
+  justify-content: space-between;
 }
 
 .a-i-center {
