@@ -1,6 +1,6 @@
 :root {
   --foot-h: 80px;
-  --mob-side-w: 80px;
+  --mob-side-w: 20vw;
   --side-w: 230px;
   --cta-h: 60px;
   --gap: 10px;
@@ -11,7 +11,7 @@
   --col-40: calc(40% - var(--gap));
   --col-50: calc(50% - var(--gap));
   --col-60: calc(60% - var(--gap));
-  --foot-color: #373737;
+  --foot-color: #595050;
 }
 
 * {
@@ -22,6 +22,8 @@
 }
 
 /*layout mobile first */
+
+
 footer {
   height: var(--foot-h);
   background-color: var(--foot-color);
@@ -123,9 +125,17 @@ main {
   width: 100%;
 }
 
+.col-f.preview {
+  max-width: 235px;
+}
+
+.col-f.lvl-bar {
+  max-width: 180px;
+}
+
 /* styling */
 .logo {
-  height: 65px;
+  height: 50px;
 }
 
 .logo-lg,
@@ -134,8 +144,9 @@ main {
 }
 
 .logo img {
-  height: 50px;
-
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 15px;
 }
 
 .side-menu {
@@ -158,13 +169,14 @@ main {
 }
 
 .side-menu ul li a {
-  height: 50px;
+  height: 20px;
   display: flex;
   align-items: center;
   border-left: 3px solid;
   border-left-color: rgb(0, 0, 0);
   margin-left: 7px;
   margin-bottom: 10px;
+  padding: 3px;
 }
 
 .side-menu ul li a,
@@ -174,8 +186,10 @@ main {
   position: relative;
 }
 
+
 .side-menu ul li a.selected {
   border-left-color: rgb(102, 255, 0);
+
 }
 
 .side-menu ul li a:focus .overlay {
@@ -184,7 +198,8 @@ main {
 
 
 .side-menu ul li a img {
-  height: 100%;
+  height: 35px;
+  padding: 6px;
 }
 
 
@@ -193,13 +208,13 @@ main {
 }
 
 .plus {
-  height: 50px;
-  padding: 0 15px;
+  height: 20px;
+  padding: 0 10px;
   background-color: grey;
   color: white;
   text-align: center;
   vertical-align: middle;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 10px 0;
 }
 
@@ -232,7 +247,7 @@ main {
 
 .download img,
 .profile img {
-  max-height: 45px;
+  max-height: 35px;
   margin-right: 10px;
 }
 
@@ -294,17 +309,17 @@ main {
 .lvl-bar {
   display: flex;
   height: 5px;
-  width: 100px;
+  min-width: 50px;
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px grey inset;
+  box-shadow: 2px 2px 5px rgb(247, 245, 245) inset;
 }
 
-.sel-lvl {
+.lvl-sel {
   height: 3px;
   width: 20%;
-  background-color: rgb(144, 145, 145);
-  box-shadow: 6px 2px 2px rgb(124, 124, 124) inset;
+  background-color: rgb(203, 204, 204);
+  box-shadow: 2px 2px 6px rgb(57, 57, 57) inset;
 }
 
 .lvl {
@@ -312,10 +327,16 @@ main {
   width: 10px;
   border-radius: 50%;
   transform: translate(-25%, -25%);
-  background-color: rgb(0, 0, 0) inset;
-  box-shadow: 2px 2px 20px rgb(149, 149, 149) inset;
+  background-color: rgb(203, 204, 204);
+  box-shadow: 2px 2px 6px rgb(57, 57, 57) inset;
+  display: none;
 }
 
+.buttons i {
+  margin-right: 3px;
+  font-size: 0.7rem;
+  ;
+}
 
 /* /footer*/
 
@@ -407,6 +428,8 @@ main {
 }
 
 /* margins */
+
+
 .m-10 {
   margin: 10px;
 }

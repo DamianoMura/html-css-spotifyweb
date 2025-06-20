@@ -1,6 +1,6 @@
 /* media queries */
 
-@media all and (min-width:552px) {
+@media all and (min-width:341px) {
 
   #content,
   .cta {
@@ -28,26 +28,30 @@
     display: block;
   }
 
+  .col-f.player {
+    font-size: 0.7rem;
+  }
+
   .track-info {
     width: 100px;
 
   }
-}
 
-@media all and (min-width:768px) {
-  .col {
-    width: var(--col-25);
+
+  @media all and (min-width:576px) {
+    .col {
+      width: var(--col-25);
+    }
+
+    .icons {
+      display: flex;
+    }
+
+
   }
 
-  .icons {
-    display: flex;
+  @media all and (min-width:1180px) {
+    .col {
+      width: var(--col-16);
+    }
   }
-
-
-}
-
-@media all and (min-width:1180px) {
-  .col {
-    width: var(--col-16);
-  }
-}
