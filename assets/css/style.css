@@ -56,10 +56,6 @@ footer {
   gap: var(--gap);
 }
 
-.row.no-gap {
-  gap: 0;
-}
-
 .col {
   width: calc(50% - var(--gap));
 }
@@ -68,34 +64,284 @@ footer {
   gap: 0;
 }
 
-/*                      /MACRO CONTAINERS
-*/
-
-
-
 .col-100 {
   width: 100%;
 }
 
-/*                      /COLUMN SELECTORS 
+
+/*                    #   #  ##     #  #   #
+/*                    ## ##  # #    #  ##  #
+/*                    # # #  #  #   #  # # #
+/*                    #   #  #####  #  #  ##
+/*                    #   #  #    # #  #   #
+/*                      MACRO CONTAINERS
 */
 
-/*                /column selector
+#sidebar {
+  width: var(--mob-side-w);
+  height: 100%;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+
+/*                           SIDEBAR   
 */
 
-/*layout mobile first */
 
+.side-menu {
+  position: relative;
+}
+
+.side-menu ul {
+  list-style: none;
+}
+
+.side-menu ul li a {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  border-left: 3px solid;
+  border-left-color: rgb(0, 0, 0);
+  margin-left: 7px;
+  margin-bottom: 10px;
+  padding: 3px;
+}
+
+.side-menu ul li a,
+.playlist .add-playlist,
+.playlist ul li,
+.download a,
+.album {
+  position: relative;
+}
+
+
+.side-menu ul li a.selected {
+  border-left-color: rgb(102, 255, 0);
+
+}
+
+.side-menu ul li a:focus .overlay {
+  display: none;
+}
+
+
+.side-menu ul li a img {
+  height: 35px;
+  padding: 6px;
+}
+
+
+.add-playlist a:focus .overlay {
+  display: none;
+}
+
+.plus {
+  padding: 0 10px;
+  background-color: grey;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.playlist {
+  margin-top: 20px;
+  margin-left: 10px;
+  display: none;
+}
+
+.playlist ul li {
+  margin-bottom: 5px;
+  list-style: none;
+}
+
+.playlist a:focus .overlay {
+  display: none;
+}
+
+
+
+.profile {
+  border-top: 2px grey solid;
+}
+
+.download img,
+.profile img {
+  height: 30px;
+  margin: 15px;
+}
+
+.profile img {
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.profile span {
+  font-weight: bold;
+}
+
+.bottom-bar a span {
+  display: none;
+}
+
+/*                                    /SIDEBAR 
+*/
+
+#content {
+  width: calc(100vw - var(--mob-side-w));
+  height: 100%;
+  overflow-y: auto;
+  background-color: #262f40;
+
+}
+
+/*                          CONTENT - CALL TO ACTION 
+*/
+
+.cta {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100vw - var(--mob-side-w));
+  height: var(--cta-h);
+  align-items: center;
+  z-index: 3;
+}
+
+.cta .btn {
+  border: white solid 1px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 20px;
+  font-size: 0.7rem;
+}
+
+.cta .btn:hover {
+
+  padding: 8px 15px;
+  margin: 20px;
+  font-size: 0.9rem;
+}
+
+/*                        MENU CATEGORIES 
+*/
+
+.categories {
+  justify-content: center;
+  margin-top: var(--cta-h);
+}
+
+.categories ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.categories li {
+  margin: 0 10px;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.categories .row .selection {
+  width: 60%;
+  border-bottom: yellowgreen 3px solid;
+  margin: 0 15px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card .album {
+  width: 100%;
+
+}
+
+
+/*                          SIDE BAR 
+*/
+.logo {
+  height: 50px;
+}
+
+.logo-lg,
+.side-menu ul li a span {
+  display: none;
+}
+
+.logo img {
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+/*                       MAIN PAGE
+/*
+/*find out */
+
+.section-title span {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.card h4 {
+  margin: 10px 0;
+}
+
+.card h6 {
+  color: grey;
+}
+
+
+.card .album img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.album .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  font-size: 3rem;
+}
+
+.album:hover .overlay {
+  opacity: 1;
+}
+
+.album.rounded {
+  border-radius: 50%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.album.rounded:hover img {
+  transform: scale(1.3);
+}
 
 /*
 /*               #####   ###     ###  #####  #####  ###
 /*               #      #   #   #   #   #    #      #  #
 /*               ###    #   #   #   #   #    ###    # #
 /*               #      #   #   #   #   #    #      #  #
-/*               #       ###     ###    #    #####  #   #           
-*/
+/*               #       ###     ###    #    #####  #   #     
 
-
-/*                       FOOTER LAYOUT
+/*                          FOOTER LAYOUT
 */
 .playing,
 .player,
@@ -219,270 +465,12 @@ footer {
 
 /*               / MEDIA CONTROLS
 */
-
-
-
-#sidebar {
-  width: var(--mob-side-w);
-  height: 100%;
-  color: aliceblue;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  font-size: 0.8rem;
-}
-
-
-#content {
-  width: calc(100vw - var(--mob-side-w));
-  height: 100%;
-  overflow-y: auto;
-  background-color: #262f40;
-
-}
-
-.cta {
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: calc(100vw - var(--mob-side-w));
-  height: var(--cta-h);
-  align-items: center;
-  z-index: 3;
-}
-
-.overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.categories {
-  justify-content: center;
-  margin-top: var(--cta-h);
-}
-
-
-.card .album {
-  width: 100%;
-}
-
-
-
-/* styling     SIDEBAR   */
-.logo {
-  height: 50px;
-}
-
-.logo-lg,
-.side-menu ul li a span {
-  display: none;
-}
-
-.logo img {
-  height: 30px;
-  margin-top: 10px;
-  margin-left: 15px;
-}
-
-.side-menu {
-  position: relative;
-}
-
-.side-menu ul {
-  list-style: none;
-}
-
-
-
-
-.side-menu ul li a {
-  height: 20px;
-  display: flex;
-  align-items: center;
-  border-left: 3px solid;
-  border-left-color: rgb(0, 0, 0);
-  margin-left: 7px;
-  margin-bottom: 10px;
-  padding: 3px;
-}
-
-.side-menu ul li a,
-.playlist .add-playlist,
-.playlist ul li,
-.download a,
-.album {
-  position: relative;
-}
-
-
-.side-menu ul li a.selected {
-  border-left-color: rgb(102, 255, 0);
-
-}
-
-.side-menu ul li a:focus .overlay {
-  display: none;
-}
-
-
-.side-menu ul li a img {
-  height: 35px;
-  padding: 6px;
-}
-
-
-.add-playlist a:focus .overlay {
-  display: none;
-}
-
-.plus {
-  padding: 0 10px;
-  background-color: grey;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 2rem;
-  margin: 10px 0;
-}
-
-.playlist {
-  margin-top: 20px;
-  margin-left: 10px;
-  display: none;
-}
-
-.playlist ul li {
-  margin-bottom: 5px;
-  list-style: none;
-}
-
-.playlist a:focus .overlay {
-  display: none;
-}
-
-
-
-.profile {
-  border-top: 2px grey solid;
-}
-
-.download img,
-.profile img {
-  height: 30px;
-  margin: 15px;
-}
-
-.profile img {
-  background-color: grey;
-  border-radius: 50%;
-}
-
-.profile span {
-  font-weight: bold;
-}
-
-.bottom-bar a span {
-  display: none;
-}
-
-/* /sidebar */
-/* cta*/
-.cta .btn {
-  border: white solid 1px;
-  border-radius: 20px;
-  padding: 5px 10px;
-  margin: 20px;
-  font-size: 0.7rem;
-}
-
-.cta .btn:hover {
-
-  padding: 8px 15px;
-  margin: 20px;
-  font-size: 0.9rem;
-}
-
-/*categories top menu */
-.categories ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-.categories li {
-  margin: 0 10px;
-  font-size: .8rem;
-  text-transform: uppercase;
-}
-
-.categories .row .selection {
-  width: 60%;
-  border-bottom: yellowgreen 3px solid;
-  margin: 0 15px;
-}
-
-
-/*find out */
-
-.section-title span {
-  font-size: 0.8rem;
-  color: grey;
-}
-
-.card h4 {
-  margin: 10px 0;
-}
-
-.card h6 {
-  color: grey;
-}
-
-
-.card .album img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.album .overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  opacity: 0;
-  font-size: 3rem;
-}
-
-.album:hover .overlay {
-  opacity: 1;
-}
-
-.album.rounded {
-  border-radius: 50%;
-  object-fit: contain;
-  overflow: hidden;
-}
-
-.album.rounded:hover img {
-  transform: scale(1.3);
-}
-
-
-
-
-/*utility*/
+/*                 UTILITY CLASSES 
+*/
 .whitelink {
   text-decoration: none;
   color: white;
 }
-
-/* /.whitelink */
-
 
 .flex {
   display: flex;
@@ -509,27 +497,6 @@ footer {
 }
 
 
-
-.bg-green {
-  background-color: green;
-}
-
-.bg-blue {
-  background-color: blue;
-}
-
-.bg-red {
-  background-color: red;
-}
-
-.bg-yellow {
-  background-color: yellow;
-}
-
-.bg-silver {
-  background-color: silver;
-}
-
 .bg-black {
   background-color: black;
 }
@@ -552,34 +519,6 @@ footer {
   padding-top: 20px;
 }
 
-.p-5 {
-  padding: 5px;
-}
-
-.p-10 {
-  padding: 10px;
-}
-
-.p-15 {
-  padding: 15px;
-}
-
-.p-20 {
-  padding: 20px;
-}
-
-.py-5 {
-  padding: 5px 0;
-}
-
-.py-10 {
-  padding: 10px 0;
-}
-
-.py-15 {
-  padding: 15px 0;
-}
-
 .py-20 {
   padding: 20px 0;
 }
@@ -588,32 +527,7 @@ footer {
   padding: 0 10px;
 }
 
-.px-15 {
-  padding: 0 15px;
-}
-
-.px-20 {
-  padding: 0 20px;
-}
-
 /* margins */
-
-
-.m-10 {
-  margin: 10px;
-}
-
-.m-15 {
-  margin: 15px;
-}
-
-.m-20 {
-  margin: 20px;
-}
-
-.my-5 {
-  margin: 5px 0;
-}
 
 .my-10 {
   margin: 10px 0;
@@ -630,13 +544,3 @@ footer {
 .mx-10 {
   margin: 0 10px;
 }
-
-.mx-15 {
-  margin: 0 15px;
-}
-
-.mx-20 {
-  margin: 0 20px;
-}
-
-.gap=0;
