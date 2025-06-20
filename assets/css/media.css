@@ -44,7 +44,7 @@
   }
 
   .player {
-    width: 60%
+    width: 60%;
   }
 }
 
@@ -63,5 +63,10 @@
 @media all and (min-width:992px) {
   .col {
     width: calc(var(--col-16) - var(--gap));
+  }
+
+  .track-info {
+    display: flex;
+    flex-direction: column;
   }
 }
