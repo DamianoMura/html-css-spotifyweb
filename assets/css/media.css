@@ -34,12 +34,16 @@
     width: 100%
   }
 
+  footer {
+    justify-content: space-between;
+  }
+
   .playing,
-  .player {
+  .media-controls {
     width: 20%;
   }
 
-  .media-controls {
+  .player {
     width: 60%
   }
 }

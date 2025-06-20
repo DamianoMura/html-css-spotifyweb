@@ -161,6 +161,7 @@ footer {
   margin: 10px;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgb(247, 245, 245) inset;
+  vertical-align: middle;
 }
 
 .lvl-sel {
@@ -213,6 +214,7 @@ footer {
 */
 .media-controls .lvl-bar {
   width: 50px;
+  align-self: center;
 }
 
 /*               / MEDIA CONTROLS
@@ -484,6 +486,10 @@ footer {
 
 .flex {
   display: flex;
+}
+
+.flex-end {
+  justify-content: flex-end;
 }
 
 .j-c-center {
