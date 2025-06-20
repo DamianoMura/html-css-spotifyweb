@@ -275,8 +275,16 @@ main {
 .cta .btn {
   border: white solid 1px;
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   margin: 20px;
+  font-size: 0.7rem;
+}
+
+.cta .btn:hover {
+
+  padding: 8px 15px;
+  margin: 20px;
+  font-size: 0.9rem;
 }
 
 /*find out */
