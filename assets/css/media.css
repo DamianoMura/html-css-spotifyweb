@@ -1,6 +1,6 @@
 /* media queries */
 
-@media all and (min-width:341px) {
+@media all and (min-width:576px) {
 
   #content,
   .cta {
@@ -28,17 +28,13 @@
     display: block;
   }
 
-  .col-f.player {
-    font-size: 0.7rem;
-  }
-
   .track-info {
     width: 100px;
 
   }
 
 
-  @media all and (min-width:576px) {
+  @media all and (min-width:768px) {
     .col {
       width: var(--col-25);
     }
