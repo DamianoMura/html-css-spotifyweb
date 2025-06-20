@@ -1,7 +1,7 @@
 :root {
   --foot-h: 80px;
   --mob-side-w: 60px;
-  --side-w: 230px;
+  --side-w: 200px;
   --cta-h: 60px;
   --gap: 10px;
   --col-16: calc(100% / 6 - var(--gap));
@@ -67,6 +67,8 @@ main {
   width: calc(100vw - var(--mob-side-w));
   height: 100%;
   overflow-y: auto;
+  background-color: #262f40;
+  color: white;
 
 }
 
@@ -87,6 +89,7 @@ main {
   height: 100%;
   position: absolute;
   top: 0;
+  left: 0;
 }
 
 .categories {
@@ -100,9 +103,11 @@ main {
   gap: var(--gap);
 }
 
+.card .album {
+  width: 100%;
+}
 
-
-/* debug only */
+/* debug only 
 .col:nth-child(odd) {
   background-color: beige;
 }
@@ -116,7 +121,7 @@ main {
   height: 250px;
 }
 
-/*/debug only */
+/debug only */
 
 .col {
   width: var(--col-50);
@@ -183,7 +188,8 @@ main {
 .side-menu ul li a,
 .playlist .add-playlist,
 .playlist ul li,
-.download a {
+.download a,
+.album {
   position: relative;
 }
 
@@ -265,6 +271,42 @@ main {
 }
 
 /* /sidebar */
+/* cta*/
+.cta .btn {
+  border: white solid 1px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 20px;
+}
+
+/*find out */
+.card h4 {
+  margin: 10px 0;
+}
+
+.card h6 {
+  color: grey;
+}
+
+
+.card .album img {
+  width: 100%;
+  height: 100%;
+
+}
+
+.album .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  font-size: 3rem;
+}
+
+.album:hover .overlay {
+  opacity: 1;
+}
 
 /* footer*/
 /*col preview */
@@ -339,13 +381,6 @@ main {
 /* /footer*/
 
 
-.cta .btn {
-  border: white solid 1px;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 20px;
-}
-
 /*utility*/
 .flex {
   display: flex;
@@ -386,6 +421,10 @@ main {
 
 .text-grey {
   color: grey;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* paddings */

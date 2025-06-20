@@ -46,7 +46,7 @@
 
   }
 
-  @media all and (min-width:1180px) {
+  @media all and (min-width:992px) {
     .col {
       width: var(--col-16);
     }
