@@ -253,8 +253,11 @@ footer {
 
 .categories .row .selection {
   width: 60%;
-  border-bottom: yellowgreen 3px solid;
-  margin: 0 15px;
+  border-bottom: #262f40 3px solid;
+}
+
+.categories .box .selection.selected {
+  border-bottom-color: rgb(102, 255, 0);
 }
 
 .overlay {
